@@ -2,9 +2,11 @@ library(dplyr)
 library(RPostgreSQL)
 
 #-----------------------------------------
+setwd("/Users/idad/Documents/RStudio")
+
 drv <- dbDriver("PostgreSQL")
 con <- dbConnect(drv, host="localhost", user= "ghilman", password="ghilmanpass", dbname="ebdb", port= 5000)
-fileName <-"/Users/idad/Documents/RStudio/sql/oos_purchased_only_ranch.sql"
+fileName <-paste(getwd(),"/sql/oos_purchased_only_ranch.sql",sep="")
 query = readChar(fileName, file.info(fileName)$size)
 dat = dbGetQuery(con,query)
 
