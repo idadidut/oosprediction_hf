@@ -16,3 +16,5 @@ skupop <- alldat %>% group_by(sku,supermarket, month = month(deliver_date)) %>% 
 
 skupopdata <- melt(skupop, id.vars = 1:3)
 skupopdata <- dcast(skupopdata, sku + supermarket ~ month + variable)
+
+#-- nambah komen
