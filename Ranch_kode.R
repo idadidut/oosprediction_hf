@@ -27,3 +27,5 @@ write.xlsx(list_of_data, file= '~/Documents/Rstudio')
 ggplot(data=dranch, aes(cw, percent_total_lost, color=as.factor(store)))+geom_line() +
     scale_x_continuous(breaks = round(seq(min(dranch$cw), max(dranch$cw), by = 1),1)) + 
     scale_y_continuous(breaks = seq(-0.5,max(dranch$percent_total_lost), by=0.05))
+
+#nyoba git
