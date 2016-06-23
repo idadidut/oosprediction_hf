@@ -18,3 +18,4 @@ skupopdata <- melt(skupop, id.vars = 1:3)
 skupopdata <- dcast(skupopdata, sku + supermarket ~ month + variable)
 
 #-- nambah komen
+#-- tambah satu lagi
